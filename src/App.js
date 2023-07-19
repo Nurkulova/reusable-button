@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "./components/Container.styled";
+import Button from "./components/Button";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Container>
+      <Button 
+        color={'secondary'}
+        bgColor={'outlined'}
+        size={'medium'}
+        type='button'
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+        OUTLINED
+      </Button>
+      <Button 
+        color={'primary'}
+        bgColor={'contained'}
+        size={'large'}
+        type='button'
+        >
+        CONTAINED
+      </Button>
+      <Button 
+        color={'primary'}
+        bgColor={'warning'}
+        size={'small'}
+        type='button'
+        >
+        <b>WARNING</b>
+      </Button>
+      <Button 
+        color={'primary'}
+        bgColor={'danger'}
+        size={'default'}
+        type='button'
+        >
+        DANGER
+      </Button>
+    </Container>
   );
 }
 
